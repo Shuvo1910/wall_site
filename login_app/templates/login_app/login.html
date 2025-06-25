@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url("{% static 'login_app/login_img.jpg' %}") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: rgba(151, 220, 224, 0.92);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .login-box p {
+      color: #555;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .remember-forgot input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .btn {
+      background: #2371a5;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #41b5d8;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .signup-link a {
+      color: #bb5113;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Hello,<br />Welcome Back</h1>
+    <p>Login from here</p>
+    <form action="{% url 'login_auth' %}" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Enter Email" required />
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" name="remember" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button class="btn" type="submit">Sign In</button>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <a href="signup">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>
