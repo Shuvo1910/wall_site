@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <title>Pick Wallpaper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .header-banner {
+      background: url("{% static 'login_app/bg_img.jpeg' %}") no-repeat center center;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .header-banner h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 30px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      position: absolute;
+      top: 0;
+      width: 95%;
+    }
+
+    .nav-link {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      padding: 8px 14px;
+      background-color: #a1d4d6;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .hero-section, .mobile-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 100px;
+      background-color: rgb(167, 221, 223);
+    }
+
+    .hero-section:nth-child(even), .mobile-section:nth-child(even) {
+      background-color: #d4d2ab;
+    }
+
+    .hero-section img, .mobile-section img {
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .hero-right, .mobile-left {
+      flex: 1;
+      padding: 0 30px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 40px 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-info, .footer-mail {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .footer-mail input,
+    .footer-mail textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .footer-mail button {
+      padding: 10px 20px;
+      background-color: #2578d6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="{% url 'desktop' %}" class="nav-link">Desktop</a>
+    <a href="{% url 'mobile' %}" class="nav-link">Mobile</a>
+  </div>
+
+  <header class="header-banner">
+    <h1>Pick Wallpaper</h1>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-left">
+      <img src="{% static 'login_app/pc_img.jpg' %}" alt="Desktop Wallpaper">
+    </div>
+       <div class="hero-right">
+      <h2>Choose the Best Wallpapers for Your Windows</h2>
+<p style="line-height: 2;">
+  High-quality HD & 4K desktop wallpapers just a click away! <br>
+  Bring your screen to life with stunning visuals. <br>
+  Fresh, trending wallpapers updated daily — totally free!
+</p>    
+</div>
+  </section>
+
+  <section class="mobile-section">
+     <div class="mobile-left">
+      <h2>Also for Your Mobile</h2>
+      <p>Discover stunning mobile wallpapers for all phone screens.</p>
+      <p>Perfect fit, crisp quality — no cropping needed.</p>
+      <p>Explore different styles, from minimal to vibrant.</p>
+      <p>Refresh your lock screen with just one tap!</p>
+    </div>
+    <div class="mobile-right">
+      <img src="{% static 'login_app/mobile_img.jpg' %}" alt="Mobile Wallpaper">
+    </div>
+  </section>
+
+  <footer>
+<div class="footer-info">
+  <h3>About</h3>
+  <p>This site is a free wallpaper hub for desktop and mobile devices. You need to log in to access all wallpapers.
+  We offer a wide collection of high-quality HD and 4K wallpapers, carefully categorized for desktops, smartphones, and tablets. Whether you’re into nature, anime, minimal designs, or abstract art — there’s something here for everyone.</p>
+
+  <p>Users can preview wallpapers before downloading, ensuring the perfect fit for their screens. New content is added regularly, so you’ll always find something fresh and inspiring. Just sign up, log in, and start exploring!</p>
+
+  <p><strong>Creator:</strong> Sultan Mahmud Shuvo</p>
+  <p><strong>Contact:</strong> +8801849473996</p>
+
+  
+  <div style="margin-top: 10px;">
+    <a href="https://www.facebook.com/Shuvo1910" target="_blank">
+      <img src="{% static 'login_app/fb_img.png' %}" alt="Facebook" style="width:32px; margin-right:10px;">
+    </a>
+
+    <a href="https://wa.me/8801849473996" target="_blank">
+      <img src="{% static 'login_app/wsp_img.png' %}" alt="WhatsApp" style="width:32px;">
+    </a>
+  </div>
+</div>
+
+
+<div class="footer-mail">
+  <h4>Contact Me</h4>
+  <form action="mailto:sultanshuvo1910@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+  </footer>
+</body>
+</html>

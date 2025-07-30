@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">      
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Wallpapers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #b9dbd8;
+    }
+
+    .navbar {
+      background-color: #222;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px 80px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      background-color: #38a4be;
+      color: rgb(2, 2, 2);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>Pick Wallpaper</h2>
+    <div>
+      <a href="{% url 'index_2' %}">Home</a>
+      <a href="{% url 'desktop' %}">Desktop</a>
+      <a href="{% url 'home' %}">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Mobile Wallpapers</h1>
+    <div class="gallery">
+      <div>
+        <img src="/media/wallpapers/mobile/b1.jpg" alt="Mobile Wallpaper 1">
+        <a href="/media/wallpapers/mobile/b1.jpg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b2.jpeg" alt="Mobile Wallpaper 2">
+        <a href="/media/wallpapers/mobile/b2.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b3.jpeg" alt="Mobile Wallpaper 3">
+        <a href="/media/wallpapers/mobile/b3.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b4.jpeg" alt="Mobile Wallpaper 4">
+        <a href="/media/wallpapers/mobile/b4.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b5.jpeg" alt="Mobile Wallpaper 5">
+        <a href="/media/wallpapers/mobile/b5.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b6.jpeg" alt="Mobile Wallpaper 6">
+        <a href="/media/wallpapers/mobile/b6.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b7.jpeg" alt="Mobile Wallpaper 7">
+        <a href="/media/wallpapers/mobile/b7.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b8.jpeg" alt="Mobile Wallpaper 8">
+        <a href="/media/wallpapers/mobile/b8.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b9.jpeg" alt="Mobile Wallpaper 9">
+        <a href="/media/wallpapers/mobile/b9.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b10.jpeg" alt="Mobile Wallpaper 10">
+        <a href="/media/wallpapers/mobile/b10.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b11.jpeg" alt="Mobile Wallpaper 11">
+        <a href="/media/wallpapers/mobile/b11.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b12.jpeg" alt="Mobile Wallpaper 12">
+        <a href="/media/wallpapers/mobile/b12.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b13.jpeg" alt="Mobile Wallpaper 13">
+        <a href="/media/wallpapers/mobile/b13.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b14.jpeg" alt="Mobile Wallpaper 14">
+        <a href="/media/wallpapers/mobile/b14.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b15.jpeg" alt="Mobile Wallpaper 15">
+        <a href="/media/wallpapers/mobile/b15.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b16.jpeg" alt="Mobile Wallpaper 16">
+        <a href="/media/wallpapers/mobile/b16.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b17.jpeg" alt="Mobile Wallpaper 17">
+        <a href="/media/wallpapers/mobile/b17.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b18.jpeg" alt="Mobile Wallpaper 18">
+        <a href="/media/wallpapers/mobile/b18.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b19.jpeg" alt="Mobile Wallpaper 19">
+        <a href="/media/wallpapers/mobile/b19.jpeg" download class="download-btn">Download</a>
+      </div>
+      <div>
+        <img src="/media/wallpapers/mobile/b20.jpeg" alt="Mobile Wallpaper 20">
+        <a href="/media/wallpapers/mobile/b20.jpeg" download class="download-btn">Download</a>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
